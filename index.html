@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="intro">
+        <img src="E:\vscode\img\g_notes_sm.png" id="introNotes">
+        <img src="E:\vscode\img\loading.gif" id="introLoading">
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <div id="nav">
+                <input type="text" id="search" placeholder="Search your notes">
+                <div id="left">
+                    <img src="E:\vscode\img\menu.jpg" id="more"></i>
+                </div>
+
+                <div id="right">
+                    <img src="E:\vscode\img\flex_box_clm.png" id="flex"></i>
+                    <img src="E:\vscode\img\user.png" id="id"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="notes-con">
+            <h6>Your Notes</h6>
+            <div class="note">
+                <h4 type="text" class="note-heading">This is a default note heading</h4>
+                <p type="text" class="note-cont">This is a default note content / paragraph</p>
+                <img src="E:\vscode\img\red_flag.jpeg" class="delNote">
+                <img src="E:\vscode\img\share.png" class="shareNote">
+                <img src="E:\vscode\img\copy.png" class="copyNote">
+                <img src="E:\vscode\img\color.png" class="colorNote">
+                <img src="E:\vscode\img\flex_box.png" class="noteOpt">
+
+                <div class="colors">
+                    <div class="red"></div>
+                    <div class="green"></div>
+                    <div class="blue"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cn-btn">
+        <button><img src="E:\vscode\img\add.jpeg"></button>
+    </div>
+
+    <div class="create-notes">
+        <div id="cn-icons">
+            <img src="E:\vscode\img\red_flag.jpeg" id="cancel"></i>
+            <img src="E:\vscode\img\green_flag.png" id="add"></i>
+        </div>
+
+        <textarea type="text" class="cn-heading" placeholder="Enter notes heading here"></textarea>
+        <textarea type="text" class="cn-cont" placeholder="Enter notes content here"></textarea>
+    </div>
+
+    <div id="menu">
+        <h3>Place where your notes are safe</h3>
+        <div id="notes">
+            <img src="E:\vscode\img\g_notes_sm.png">
+            <h6>Notes</h6>
+        </div>
+
+        <div id="reminder">
+            <img src="E:\vscode\img\reminder.png">
+            <h6>Reminders</h6>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="archive">
+            <img src="E:\vscode\img\archeive.jpeg">
+            <h6>Archive</h6>
+        </div>
+
+        <div id="trash">
+            <img src="E:\vscode\img\delete.png">
+            <h6>Trash</h6>
+        </div>
+
+        <div id="settings">
+            <img src="E:\vscode\img\setting.png">
+            <h6>Settings</h6>
+        </div>
+
+        <div id="help-feedback">
+            <img src="E:\vscode\img\help.png">
+            <h6>Help and feedback</h6>
+        </div>
+
+        <button id="bth">Back to home</button>
+    </div>
+
+    <div id="emptyContErr">
+        <h3>Invalid Input 🙁</h3>
+        <p>You must input something to create a note</p>
+    </div>
+    
+    <div id="copySuccess">
+        <h3>Copied 😀</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
