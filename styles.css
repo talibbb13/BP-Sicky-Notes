@@ -160,15 +160,14 @@ body {
 
 #left {
     position: absolute;
-    top: 10%;
-    left: .3%;
-    display: flex;
+    top: 20%;
+    left: 6px;
 }
 
 #more {
-    font-size: 1.3rem;
-    height: 2rem;
     align-self: center;
+    font-size: 1.3rem;
+    height: 1.7rem;
     border-radius: 100%;
 }
 
@@ -190,6 +189,7 @@ body {
     align-self: center;
     font-size: 1.3rem;
     height: 2rem;
+    border-radius: 100%;
 }
 
 #notes-con {
@@ -223,8 +223,8 @@ body {
 
 .note>img {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
-    height: 2rem;
-    width: 2rem;
+    height:1.3rem;
+    width: 1.3rem;
     position: absolute;
     bottom: 3%;
     right: 1vw;
@@ -257,6 +257,7 @@ body {
 .shareNote {
     background: white;
     padding: 2px;
+    background: transparent;
 }
 
 .noteOpt {
@@ -296,12 +297,12 @@ body {
 
 #menu {
     background: whitesmoke;
+    height: 100%;
     width: 25vw;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 9;
-    height: 100%;
     padding: 1vw 2vw;
     display: flex;
     flex-direction: column;
@@ -329,6 +330,7 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     object-fit: cover;
+    border-radius: 100%;
 }
 
 #menu h3 {
