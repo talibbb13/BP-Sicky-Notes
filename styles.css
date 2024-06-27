@@ -19,33 +19,31 @@ body {
 body {
     position: relative;
 }
+#main {
+    min-height: 100%;
+    width: 100%;
+    background-color: #f0f0f0;
+    position: relative;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .7s;
+    background: #1e1e1e;
+    color: white;
+}
 
 #intro {
     position: absolute;
     z-index: 9999999999;
     transition: all ease-in-out .5s;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: white;
 }
 
-#intro img {
-    height: 50vh;
-    width: 50vh;
+#intro i {
     object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-#introNotes {
-    transform: translate(-50%, -70%);
-    z-index: 9;
-}
-
-#introLoading {
-
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .create-notes {
@@ -54,27 +52,23 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    background: #bfbfbf;
+    background: #1e1e1e;
     transform: translate(-50%, -50%) scale(0);
     z-index: 99;
     overflow: hidden;
-    padding: 2vw 1vw;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    color: #f0f0f0;
+    z-index: 99999;
 }
-
 
 #cn-icons {
     position: absolute;
     top: 5%;
     right: 3%;
-    font-size: 3vw;
+    font-size: 5vw;
     cursor: pointer;
 }
 
-#cn-icons img {
-    height: 4rem;
-    border-radius: 100%;
-}
 
 .cn-heading {
     width: 100%;
@@ -83,9 +77,16 @@ body {
     padding: 0vw 1vw;
     font-size: 2.3vw;
     font-weight: 600;
-    background-color: #bfbfbf;
-    margin-top: 3rem;
+    background-color: #3c3c3c;
     resize: none;
+    color: #f0f0f0;
+    padding-top: 3vw;
+    padding-bottom: 1vw;
+    padding-left: 3vw;
+}
+
+.cn-heading::placeholder, .cn-cont::placeholder{
+    color: rgb(199, 199, 199);
 }
 
 .cn-heading::-webkit-scrollbar {
@@ -100,11 +101,15 @@ body {
     border: none;
     padding: 0vw 1vw;
     font-size: 1.3vw;
-    background-color: #bfbfbf;
+    background-color: #3c3c3c;
+    color: #f0f0f0;
+    padding-top: 3vw;
+    padding-bottom: 1vw;
+    padding-left: 3vw;
 }
 
 #cn-btn {
-    position: absolute;
+    position: fixed;
     right: 5%;
     bottom: 5%;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .7s;
@@ -114,44 +119,46 @@ body {
     border: none;
     border-radius: 100%;
     overflow: hidden;
+    background-color: transparent;
+    color: white;
+    font-size: 5vw;
 }
 
-#cn-btn img {
-    height: 5vw;
+#cn-btn i {
     width: 5vw;
     border-radius: 100%;
-    font-size: 2vw;
     cursor: pointer;
-}
-
-#main {
-    min-height: 100%;
-    width: 100%;
-    background-color: #f0f0f0;
-    padding: 1vw 2vw;
-    position: relative;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) .7s;
 }
 
 #header {
     width: 100%;
+    background: #1e1e1e;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c3c3c;
 }
 
 #nav {
-    height: 2.5rem;
+    height: 3rem;
     width: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #search {
     height: 100%;
-    width: 100%;
-    padding: 0 2.7rem;
+    width: 60%;
+    padding: 0 3rem;
     border: none;
-    border-radius: 100px;
-    background: #d5d5d5;
-    font-size: 0.7rem;
+    border-radius: 25px;
+    background: white;
+    font-size: 1rem;
     outline: none;
+    color: black;
 }
 
 #search::placeholder {
@@ -160,43 +167,52 @@ body {
 
 #left {
     position: absolute;
-    top: 20%;
-    left: 6px;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    color: black;
 }
 
 #more {
-    align-self: center;
+    color: black;
+    cursor: pointer;
     font-size: 1.3rem;
-    height: 1.7rem;
-    border-radius: 100%;
 }
 
 #right {
     position: absolute;
-    top: 10%;
-    right: .5%;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
     display: flex;
-    gap: 1vw;
+    gap: 1rem;
 }
 
 #flex {
-    font-size: 1.3rem;
-    align-self: center;
-    height: 2rem;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    color: #f0f0f0;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
 #id {
-    align-self: center;
-    font-size: 1.3rem;
-    height: 2rem;
-    border-radius: 100%;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    background: #3c3c3c;
+    color: #f0f0f0;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
 }
+
 
 #notes-con {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 3rem;
+    padding: 7rem 2rem;
     gap: 1vw;
     justify-content: space-evenly;
     position: relative;
@@ -206,24 +222,26 @@ body {
     position: absolute;
     left: 50%;
     top: 5%;
-    font-size: 1.3vw;
+    font-size: 2vw;
+    color: #f0f0f0;
 }
 
 .note {
     height: 20rem;
     width: 15rem;
-    background: aliceblue;
+    background: #2a2a2a;
     display: flex;
     flex-direction: column;
     border-radius: 1vw;
     overflow: hidden;
     border: 1px solid gray;
     position: relative;
+    color: white;
 }
 
-.note>img {
+.note>i {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
-    height:1.3rem;
+    height: 1.3rem;
     width: 1.3rem;
     position: absolute;
     bottom: 3%;
@@ -231,6 +249,7 @@ body {
     object-fit: cover;
     border-radius: 100px;
     cursor: pointer;
+    color: white;
 }
 
 .note-heading {
@@ -239,7 +258,8 @@ body {
     font-size: 1.5vw;
     font-weight: 700;
     border: none;
-    background-color: #bfbfbf;
+    background-color: #3c3c3c;
+    color: #f0f0f0;
     resize: none;
     word-wrap: break-word;
 }
@@ -250,22 +270,49 @@ body {
     padding: 0 1vw;
     border: none;
     font-size: 1vw;
-    background-color: #bfbfbf;
+    background-color: #3c3c3c;
+    color: #f0f0f0;
     word-wrap: break-word;
 }
 
-.shareNote {
-    background: white;
-    padding: 2px;
-    background: transparent;
+.noteOpt {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 9;
+    cursor: pointer;
+    color: white;
+    z-index: 999;
 }
 
-.noteOpt {
+.noteOpt i {
+    font-size: 1.5rem;
+}
+
+.delNote, .shareNote, .copyNote, .colorNote {
+    position: absolute;
+    bottom: 5%;
     z-index: 9;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.delNote {
+    right: 5%;
+}
+
+.shareNote {
+    right: 5%;
+}
+
+.copyNote {
+    right: 5%;
 }
 
 .colorNote {
-    z-index: 1;
+    right: 5%;
 }
 
 .colors>div {
@@ -275,28 +322,43 @@ body {
     right: 85%;
     bottom: 3%;
     border-radius: 100%;
-    transition: all ease-in-out .1s;
+    transition: all ease-in-out 0.1s;
     opacity: 0;
- border : 2px solid white;
+    border: 2px solid white;
+    background: #3c3c3c;
+    cursor: pointer;
 }
 
+.colors>.red {
+    background-color: #D32F2F;
+}
+
+.colors>.green {
+    background-color: #388E3C;
+}
+
+.colors>.blue {
+    background-color: #1976D2;
+}
+
+
 .red {
-    background: rgb(255, 201, 211);
+    background: #D32F2F;
     /* bottom: 20%; */
 }
 
 .green {
-    background: rgb(120 215 120);
+    background: #388E3C;
     /* bottom: 30%; */
 }
 
 .blue {
-    background: rgb(119, 142, 211);
+    background: #1976D2;
     /* bottom: 40%; */
 }
-
 #menu {
-    background: whitesmoke;
+    background: #333;
+    color: #f0f0f0;
     height: 100%;
     width: 25vw;
     position: absolute;
@@ -322,11 +384,11 @@ body {
 }
 
 #menu>div:hover {
-    background-color: lightblue;
+    background-color: #444;
     border-radius: 50px;
 }
 
-#menu>div img {
+#menu>div i, #menu>div i {
     height: 1.5rem;
     width: 1.5rem;
     object-fit: cover;
@@ -342,23 +404,25 @@ body {
 }
 
 #menu>div i {
-    height: 2rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
 }
 
 #menu>button {
     padding: 0.3rem 0;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 500;
     border-radius: 0.3rem;
     border: 1px solid gray;
     margin-top: 1rem;
+    background-color: #444;
+    color: #f0f0f0;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
 }
 
 #menu>button:hover {
-    background: black;
+    background: #555;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0);
 }

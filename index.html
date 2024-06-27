@@ -4,97 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Notes App</title>
     <link rel="stylesheet" href="styles.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 
 <body>
     <div id="intro">
-        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/90/e7/74/90e77479-f679-b0d8-abf5-4646f8df9d2a/logo_keep_2020q4_color-0-1x_U007emarketing-0-0-0-6-0-0-0-85-220-0.png/1200x600wa.png" id="introNotes">
-        <img src="https://media3.giphy.com/media/YOw8mpVUyG8RIyR4uM/giphy.gif?cid=6c09b952he32l3slmvrec43dtwuxj32obi59oq28rkqw2ten&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" id="introLoading">
+<i class="ri-file-edit-fill"></i>
+<i class="ri-loader-2-line"></i>
     </div>
-
+    
     <div id="main">
-        <div id="header">
-            <div id="nav">
+        <header id="header">
+            <nav id="nav">
                 <input type="text" id="search" placeholder="Search your notes">
                 <div id="left">
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-menu-176-433842.png" id="more"></i>
+                    <i id="more" class="ri-menu-4-line menu"></i>
                 </div>
 
                 <div id="right">
-                    <img src="https://cdn3.iconfinder.com/data/icons/layout-line-2/48/menu_flexbox-512.png" id="flex"></i>
-                    <img src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" id="id"></i>
+                    <i id="flex" class="ri-layout-masonry-fill"></i>
                 </div>
-            </div>
-        </div>
+            </nav>
+        </header>
 
-        <div id="notes-con">
+        <section id="notes-con">
             <h6>Your Notes</h6>
-      
-     
-
-        </div>
+        </section>
     </div>
 
     <div id="cn-btn">
-        <button><img src="https://static.vecteezy.com/system/resources/thumbnails/017/350/130/small_2x/add-icon-design-in-round-shape-png.png"></button>
+        <button><i class="ri-add-circle-fill"></i></button>
     </div>
 
     <div class="create-notes">
         <div id="cn-icons">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flat_cross_icon.svg/1024px-Flat_cross_icon.svg.png" id="cancel"></i>
-            <img src="https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png" id="add"></i>
+            <i id="cancel" class="ri-close-circle-fill"></i>
+            <i id="add" class="ri-checkbox-circle-fill"></i>
         </div>
 
-        <textarea type="text" class="cn-heading" placeholder="Enter notes heading here"></textarea>
-        <textarea type="text" class="cn-cont" placeholder="Enter notes content here"></textarea>
+        <textarea class="cn-heading" placeholder="Enter notes heading here"></textarea>
+        <textarea class="cn-cont" placeholder="Enter notes content here"></textarea>
     </div>
 
-    <div id="menu">
+    <aside id="menu">
         <h3>Place where your notes are safe</h3>
         <div id="notes">
-            <img src="https://www.google.com/images/icons/product/keep-512.png">
+            <i class="ri-file-edit-fill"></i>
             <h6>Notes</h6>
         </div>
 
         <div id="reminder">
-            <img src="https://png.pngtree.com/element_our/20190530/ourmid/pngtree-cartoon-reminder-icon-download-image_1251426.jpg">
+            <i class="ri-error-warning-fill"></i>
             <h6>Reminders</h6>
         </div>
-        <br>
         <hr>
-        <br>
         <div id="archive">
-            <img src="https://png.pngtree.com/png-vector/20190331/ourmid/pngtree-file-archive-icon-with-line-style-vector-illustration-png-image_876755.jpg">
+            <i class="ri-inbox-archive-fill"></i>
             <h6>Archive</h6>
         </div>
 
         <div id="trash">
-            <img src="https://png.pngtree.com/png-vector/20190326/ourmid/pngtree-vector-trash-icon-png-image_865253.jpg">
+            <i class="ri-delete-bin-6-fill"></i>
             <h6>Trash</h6>
         </div>
 
         <div id="settings">
-            <img src="https://w7.pngwing.com/pngs/828/543/png-transparent-computer-icons-service-technology-setting-miscellaneous-service-business-thumbnail.png">
+            <i class="ri-settings-fill"></i>
             <h6>Settings</h6>
         </div>
 
         <div id="help-feedback">
-            <img src="https://w7.pngwing.com/pngs/675/111/png-transparent-computer-icons-icon-design-help-text-number-help.png">
+            <i class="ri-feedback-fill"></i>
             <h6>Help and feedback</h6>
         </div>
 
         <button id="bth">Back to home</button>
-    </div>
+    </aside>
 
     <div id="emptyContErr">
-        <h3>Invalid Input 🙁</h3>
+        <h3>Invalid Input <i class="ri-emotion-unhappy-fill"></i></h3>
         <p>You must input something to create a note</p>
     </div>
     
     <div id="copySuccess">
-        <h3>Copied 😀</h3>
+        <h3>Copied <i class="ri-emotion-happy-fill"></i></h3>
     </div>
 
     <script src="script.js"></script>
